@@ -25,15 +25,7 @@ NUM_CLASSES = len(CLASSES)
 IMG_SIZE = 128
  
 class Animals10Dataset(Dataset):
-    """
-    Dataset klasa za Animals-10.
- 
-    Args:
-        root_dir      : putanja do 'raw-img' foldera
-        transform     : torchvision transform pipeline
-        max_per_class : maksimalan broj slika po klasi (None = sve)
-    """
- 
+    
     def __init__(
         self,
         root_dir: str,
