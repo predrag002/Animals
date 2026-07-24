@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  animals-app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      
+      - ./models:/app/models
+      - ./results:/app/results
+    environment:
+      - MODELS_DIR=/app/models
+      - RESULTS_DIR=/app/results
+    restart: unless-stopped
